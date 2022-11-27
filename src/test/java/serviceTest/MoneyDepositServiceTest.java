@@ -31,14 +31,6 @@ public class MoneyDepositServiceTest {
     @Autowired
     private MoneyDepositService moneyDepositService;
 
-    @Autowired
-    private CompteService compteService;
-
-    @Autowired
-    private UtilisateurRepository utilisateurRepository;
-
-    @Autowired
-    private MoneyDepositRepository moneyDepositRepository;
 
     @Test
     public void findAllTest(){

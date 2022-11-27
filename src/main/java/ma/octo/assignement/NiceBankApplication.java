@@ -21,15 +21,18 @@ import java.util.Date;
 
 @SpringBootApplication
 public class NiceBankApplication implements CommandLineRunner {
-	@Autowired
-	CompteRepository compteRepository;
-	@Autowired
-	UtilisateurRepository utilisateurRepository;
-	@Autowired
-	TransferService transferService;
 
-	@Autowired
-	MoneyDepositService moneyDepositService;
+	private final CompteRepository compteRepository;
+	private final UtilisateurRepository utilisateurRepository;
+	private final TransferService transferService;
+	private final MoneyDepositService moneyDepositService;
+
+	public NiceBankApplication(CompteRepository compteRepository, UtilisateurRepository utilisateurRepository, TransferService transferService, MoneyDepositService moneyDepositService) {
+		this.compteRepository = compteRepository;
+		this.utilisateurRepository = utilisateurRepository;
+		this.transferService = transferService;
+		this.moneyDepositService = moneyDepositService;
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(NiceBankApplication.class, args);

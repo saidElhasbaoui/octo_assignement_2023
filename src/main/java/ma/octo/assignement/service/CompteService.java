@@ -21,9 +21,7 @@ public class CompteService implements ICompte {
 
     @Override
     public List<Compte> findAll() {
-        System.out.println("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
         List<Compte> all = compteRepository.findAll();
-        System.out.println("sizo is "+all.size());
         if (CollectionUtils.isEmpty(all)) {
             return null;
         } else {
