@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@EnableAutoConfiguration
 @RequestMapping( "/api/deposit")
-public class MoneyDepositController {
+public class MoneyDepositController{
 
     private final MoneyDepositService moneyDepositService;
 

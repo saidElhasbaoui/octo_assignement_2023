@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@EnableAutoConfiguration
 @RequestMapping("/api/utilisateurs")
 public class UtilisateurController {
 

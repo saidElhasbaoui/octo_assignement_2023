@@ -13,7 +13,6 @@ import java.util.List;
 
 
 @RestController
-@EnableAutoConfiguration
 @RequestMapping("/api/comptes")
 public class CompteController {
 
