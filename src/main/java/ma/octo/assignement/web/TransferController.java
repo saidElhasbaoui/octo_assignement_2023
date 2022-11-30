@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@EnableAutoConfiguration
 @RequestMapping( "/api/transfers")
 public class TransferController {
 

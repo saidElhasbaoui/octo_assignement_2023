@@ -6,9 +6,6 @@ import ma.octo.assignement.dto.MoneyDepositDto;
 
 import ma.octo.assignement.exceptions.CompteNonExistantException;
 import ma.octo.assignement.exceptions.TransactionException;
-import ma.octo.assignement.repository.MoneyDepositRepository;
-import ma.octo.assignement.repository.UtilisateurRepository;
-import ma.octo.assignement.service.CompteService;
 import ma.octo.assignement.service.MoneyDepositService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
