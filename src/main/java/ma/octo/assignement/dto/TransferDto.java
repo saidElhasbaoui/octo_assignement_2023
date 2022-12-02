@@ -7,7 +7,6 @@ import java.util.Date;
 
 @Data
 public class TransferDto {
-  private Long id;
   private String numeroCompteEmetteur;
   private String numeroCompteBeneficiaire;
   private String motif;
