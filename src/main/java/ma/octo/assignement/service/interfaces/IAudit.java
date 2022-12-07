@@ -1,14 +1,14 @@
 package ma.octo.assignement.service.interfaces;
 
-import ma.octo.assignement.domain.AuditTransfer;
+import ma.octo.assignement.domain.Audit;
 
 import java.util.List;
 
 public interface IAudit {
 
-    AuditTransfer auditTransfer(String message);
+    Audit auditTransfer(String message);
 
-    AuditTransfer auditDeposit(String message);
+    Audit auditDeposit(String message);
 
-    List<AuditTransfer> findAll();
+    List<Audit> findAll();
 }

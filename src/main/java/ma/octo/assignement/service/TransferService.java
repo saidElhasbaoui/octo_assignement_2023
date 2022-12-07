@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -51,6 +52,7 @@ public class TransferService implements ITransfer {
     }
 
     @Override
+    @Transactional
     public TransferDto save(TransferDto transferDto)
             throws SoldeDisponibleInsuffisantException, CompteNonExistantException, TransactionException {
         Compte compteEmetteur = compteRepository.findByNumeroCompte(transferDto.getNumeroCompteEmetteur());

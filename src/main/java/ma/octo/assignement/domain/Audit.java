@@ -15,8 +15,8 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "audit_transfer")
-public class AuditTransfer {
+@Table(name = "audit")
+public class Audit {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;

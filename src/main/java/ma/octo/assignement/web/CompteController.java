@@ -27,7 +27,7 @@ public class CompteController {
     }
 
     @GetMapping("")
-    List<Compte> loadAllCompte() {
+    public List<Compte> loadAllCompte() {
         return compteService.findAll();
     }
 

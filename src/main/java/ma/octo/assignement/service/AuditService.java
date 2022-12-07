@@ -1,6 +1,6 @@
 package ma.octo.assignement.service;
 
-import ma.octo.assignement.domain.AuditTransfer;
+import ma.octo.assignement.domain.Audit;
 import ma.octo.assignement.domain.util.EventType;
 import ma.octo.assignement.repository.AuditTransferRepository;
 import ma.octo.assignement.service.interfaces.IAudit;
@@ -27,9 +27,9 @@ public class AuditService implements IAudit {
     }
 
     @Override
-    public AuditTransfer auditTransfer(String message) {
+    public Audit auditTransfer(String message) {
         LOGGER.info("Audit de l'événement {}", EventType.TRANSFER);
-        AuditTransfer audit = new AuditTransfer();
+        Audit audit = new Audit();
         audit.setEventType(EventType.TRANSFER);
         audit.setMessage(message);
         auditTransferRepository.save(audit);
@@ -38,11 +38,11 @@ public class AuditService implements IAudit {
     }
 
     @Override
-    public AuditTransfer auditDeposit(String message) {
+    public Audit auditDeposit(String message) {
 
         LOGGER.info("Audit de l'événement {}", EventType.DEPOSIT);
 
-        AuditTransfer audit = new AuditTransfer();
+        Audit audit = new Audit();
         audit.setEventType(EventType.DEPOSIT);
         audit.setMessage(message);
         auditTransferRepository.save(audit);
@@ -51,9 +51,9 @@ public class AuditService implements IAudit {
     }
 
     @Override
-    public List<AuditTransfer> findAll() {
-        List<AuditTransfer> auditTransfers = auditTransferRepository.findAll();
+    public List<Audit> findAll() {
+        List<Audit> audits = auditTransferRepository.findAll();
 
-        return CollectionUtils.isEmpty(auditTransfers) ? null : auditTransfers;
+        return CollectionUtils.isEmpty(audits) ? null : audits;
     }
 }

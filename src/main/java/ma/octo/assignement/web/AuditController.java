@@ -1,7 +1,7 @@
 package ma.octo.assignement.web;
 
 
-import ma.octo.assignement.domain.AuditTransfer;
+import ma.octo.assignement.domain.Audit;
 import ma.octo.assignement.service.AuditService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -24,7 +24,7 @@ public class AuditController {
     }
 
     @GetMapping("")
-    List<AuditTransfer> loadAllAudit(){
+    List<Audit> loadAllAudit(){
         return auditService.findAll();
     }
 

@@ -20,7 +20,7 @@ import java.util.Date;
 
 //Specifies the discriminator column for the SINGLE_TABLE and JOINED Inheritance mapping strategies
 @DiscriminatorColumn( name="transaction_type")
-public abstract class Transaction {
+public class Transaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

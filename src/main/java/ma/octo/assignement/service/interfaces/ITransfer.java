@@ -10,7 +10,9 @@ import java.util.List;
 public interface ITransfer {
 
     List<TransferDto> findAll();
-    TransferDto save(TransferDto transferDto) throws SoldeDisponibleInsuffisantException, CompteNonExistantException, TransactionException;
+    TransferDto save(TransferDto transferDto) throws SoldeDisponibleInsuffisantException,
+            CompteNonExistantException,
+            TransactionException;
 
 
 }

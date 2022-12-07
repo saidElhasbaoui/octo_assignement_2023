@@ -13,7 +13,6 @@ public class TransferMapper {
 
     public static TransferDto transforToDto(Transfer transfer) {
         transferDto = new TransferDto();
-        transferDto.setId(transfer.getId());
         transferDto.setNumeroCompteEmetteur(transfer.getCompteEmetteur().getNumeroCompte());
         transferDto.setNumeroCompteBeneficiaire(transfer.getCompteBeneficiaire().getNumeroCompte());
         transferDto.setMontant(transfer.getMontantTransfer());
